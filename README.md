@@ -1,16 +1,14 @@
 # The Earth
 > The Earth in the space in the 3D scene
 
-### Briefly about the project
+## Briefly about the project
 
 <ul>
     <li>You can find The Earth, The Sun and The Moon in the scene <br/></li>
     <li>Meshes are animated for better experience <br/></li>
 </ul>
-
-***
  
- ### Usage
+ ## Usage
  
 <ul>
     <li>Hold down left mouse button to rotate this scene on PC / Laptop <br/></li>
