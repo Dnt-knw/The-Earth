@@ -96,7 +96,7 @@
       	controls.target.set(0, 0, 0);
       	controls.update();
       	controls.enablePan = false;
-      	controls.minDistance = 15;
+      	controls.minDistance = 20;
       	controls.maxDistance = 350;
       	controls.enableDamping = true;
 
@@ -239,7 +239,8 @@
       	};
 
       	setTimeout(onIncorrectRendererSize, 100);
-      	setTimeout(onIncorrectRendererSize, 250);
+      	setTimeout(onIncorrectRendererSize, 300);
+		setTimeout(onIncorrectRendererSize, 500);
 
       	const animate = () => {
       		rotateEarth();
