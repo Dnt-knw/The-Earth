@@ -4,47 +4,47 @@
     <meta charset="utf-8" />
     <title>Earth & Moon 3D</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href='https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png' />
+    <link rel="icon" href='./assets/Earth-globe.png' />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main-container">
       <div class="loading-container">
         <img
-          src="https://dl.dropbox.com/s/1ju4fas10ittaps/Earth_image.jpg"
+          src="./assets/Earth_image.jpg"
           id="earth-image"
-          alt=""
+          alt="earth"
         />
         <div class="image-container">
           <!-- Icons made by Freepik from www.flaticon.com -->
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
           <img
             class="earth-icon"
-            src="https://dl.dropbox.com/s/ipbjfvjuck9336u/Earth-globe.png"
+            src="./assets/Earth-globe.png"
             alt="earth-globe"
           />
         </div>
@@ -87,7 +87,7 @@
       	const fov = 60;
       	const aspect = w / h;
       	const near = 1;
-      	const far = 50000;
+      	const far = 150000;
 
       	const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
       	camera.position.set(0, 0, 30);
@@ -109,7 +109,7 @@
       		}, ms += 200);
       	};
 
-      	const sceneBackground = new THREE.TextureLoader().load('https://dl.dropbox.com/s/vzomkozv7ppv17q/Space.jpg', updateProgress);
+      	const sceneBackground = new THREE.TextureLoader().load('./assets/Space.jpg', updateProgress);
       	sceneBackground.encoding = THREE.sRGBEncoding;
       	sceneBackground.mapping = THREE.EquirectangularReflectionMapping;
       	scene.background = sceneBackground;
@@ -122,11 +122,11 @@
       		return mesh;
       	};
 
-      	const earthTex = new THREE.TextureLoader().load('https://dl.dropbox.com/s/m0kwjhwce5b77j7/Earth.jpg', updateProgress);
-      	const sunTex = new THREE.TextureLoader().load('https://dl.dropbox.com/s/5bgn6x2nv3bvitn/Sun.jpg', updateProgress);
+      	const earthTex = new THREE.TextureLoader().load('./assets/Earth.jpg', updateProgress);
+      	const sunTex = new THREE.TextureLoader().load('./assets/Sun.jpg', updateProgress);
       	const earthRadius = 6371;
-      	const moonTex = new THREE.TextureLoader().load('https://dl.dropbox.com/s/a3egh8uy0pg6uq2/Moon.jpg', updateProgress);
-      	const cloudsTex = new THREE.TextureLoader().load('https://dl.dropbox.com/s/w8v39sh3o9pg6fd/Clouds.jpg', updateProgress);
+      	const moonTex = new THREE.TextureLoader().load('./assets/Moon.jpg', updateProgress);
+      	const cloudsTex = new THREE.TextureLoader().load('./assets/Clouds.jpg', updateProgress);
 
       	earthTex.anisotropy = moonTex.anisotropy = cloudsTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
@@ -161,13 +161,13 @@
       		emissiveMap: sunTex,
       	}));
 
-      	sun.position.set(-350, 0, -49000);
+      	sun.position.set(-350, 0, -149600);
 
       	const light = new THREE.PointLight(0xFFFFFF, 1.6);
-      	light.position.set(-350, 0, -48000);
+      	light.position.set(-350, 0, -148600);
       	scene.add(light);
 
-      	scene.add(new THREE.AmbientLight(0xFFFFFF, 0.1));
+      	scene.add(new THREE.AmbientLight(0xFFFFFF, 0.15));
 
       	const onWindowResize = () => {
       		const w = window.innerWidth;
