@@ -11,7 +11,7 @@
 ### You can find here 🔍
 
 - The Earth 🌍 and the clouds ☁️ moving on it
-- The moving Moon 🌑
+- The moving Moon 🌕
 - The brightly glowing sun ☀️
 - Awesome space background 🌟
  
