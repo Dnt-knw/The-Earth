@@ -2,7 +2,7 @@
 
 > The Earth in the space in the 3D scene ✨
 
-### See the <a href='https://dnt-knw.github.io/The-Earth' target='_blank' title='Click to open the project'> Demo </a> 👁
+### See the <a href='https://dnt-knw.github.io/The-Earth' target='_blank' title='Click to open the project'>Demo</a> 👁
 
 <img src='./The_Earth.gif' alt='earth' />
 
